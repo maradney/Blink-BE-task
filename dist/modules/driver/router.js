@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const controller_1 = require("./controller");
+const express_validator_1 = require("express-validator");
+const router = (0, express_1.Router)();
+router.use((0, express_1.json)());
+router.get('/', controller_1.controller.drivers);
+router.post('/create', (0, express_validator_1.body)('firstName').trim().notEmpty(), (0, express_validator_1.body)('lastName').trim().notEmpty(), (0, express_validator_1.body)('email').trim().notEmpty().isEmail(), (0, express_validator_1.body)('phoneNumber').trim().notEmpty(), controller_1.controller.create);
+exports.default = router;

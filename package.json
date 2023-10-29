@@ -1,0 +1,37 @@
+{
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "serve": "node dist/index.js",
+    "lint": "eslint src/**/*.ts --fix",
+    "test": "cross-env ENV=testing jest --testPathIgnorePatterns /dist/"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/jest": "^29.5.6",
+    "@types/node": "^20.8.9",
+    "@types/sqlite3": "^3.1.10",
+    "@types/supertest": "^2.0.15",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "express": "^4.18.2",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "express-validator": "^7.0.1",
+    "promised-sqlite3": "^2.1.0",
+    "sqlite3": "^5.1.6"
+  }
+}

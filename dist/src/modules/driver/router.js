@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const controller_1 = require("./controller");
+const express_validator_1 = require("express-validator");
+const router = (0, express_1.Router)();
+router.use((0, express_1.json)());
+router.get('/', controller_1.controller.drivers);
+router.get('/:id', (0, express_validator_1.param)('id').notEmpty(), controller_1.controller.driver);
+router.post('/', (0, express_validator_1.body)('firstName').trim().notEmpty(), (0, express_validator_1.body)('lastName').trim().notEmpty(), (0, express_validator_1.body)('email').trim().notEmpty().isEmail(), (0, express_validator_1.body)('phoneNumber').trim().notEmpty(), controller_1.controller.create);
+router.patch('/edit/:id', (0, express_validator_1.param)('id').notEmpty(), (0, express_validator_1.body)('firstName').optional(), (0, express_validator_1.body)('lastName').optional(), (0, express_validator_1.body)('email').optional(), (0, express_validator_1.body)('phoneNumber').optional(), controller_1.controller.update);
+router.delete('/delete/:id', (0, express_validator_1.param)('id').notEmpty(), controller_1.controller.deleteOne);
+exports.default = router;
