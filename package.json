@@ -12,6 +12,7 @@
     "@types/node": "^20.8.9",
     "@types/sqlite3": "^3.1.10",
     "@types/supertest": "^2.0.15",
+    "@types/swagger-ui-express": "^4.1.5",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "cross-env": "^7.0.3",
@@ -32,6 +33,7 @@
     "@faker-js/faker": "^8.2.0",
     "express-validator": "^7.0.1",
     "promised-sqlite3": "^2.1.0",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "swagger-ui-express": "^5.0.0"
   }
 }
