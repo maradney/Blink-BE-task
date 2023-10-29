@@ -13,4 +13,4 @@ Then run
 npm start
 ```
 
-and you're good to go.
+and you're good to go. visit (http://localhost:3000) and checkout (http://localhost:3000/api-docs/) for simple docs.
